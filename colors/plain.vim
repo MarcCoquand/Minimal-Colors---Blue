@@ -247,7 +247,7 @@ hi! link PmenuSbar        Pmenu
 hi! link PmenuThumb       Pmenu
 
 "__PMenuDiagnostic
-" call s:h("PmenuError",    {"fg": "red", "bg": s:cursor_line})
+call s:h("PmenuError",    {"gui": "bold", "fg": "red", "bg": s:cursor_line})
 
 " __PmenuSel__
 call s:h("PmenuSel",      {"fg": s:norm, "bg": s:cursor_line, "gui": "bold"})
