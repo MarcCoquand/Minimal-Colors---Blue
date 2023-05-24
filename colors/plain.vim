@@ -63,6 +63,7 @@ if &background == "dark"
   let s:ok               = s:light_green
   let s:warning          = s:yellow
   let s:error            = s:light_red
+  let s:pmenu            = s:subtle_black
 else
   let s:bg               = s:white
   let s:bg_subtle        = s:lighter_gray
@@ -84,6 +85,8 @@ else
   let s:ok               = s:light_green
   let s:warning          = s:yellow
   let s:error            = s:dark_red
+  let s:pmenu            = s:lightest_gray
+
 endif
 
 unlet s:black
@@ -191,6 +194,8 @@ call s:h("NonText",       {"fg": s:norm_very_subtle})
 hi! link Folded           NonText
 hi! link qfLineNr         NonText
 
+
+
 " __Search__
 call s:h("Search",        {"bg": s:selection, "fg": s:selection_fg})
 call s:h("IncSearch",     {"bg": s:selection, "fg": s:selection_fg, "gui": "bold"})
@@ -241,6 +246,10 @@ call s:h("StatusLineWarning", {"gui": "underline", "bg": s:bg, "fg": s:warning})
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:cursor_line})
 hi! link PmenuSbar        Pmenu
 hi! link PmenuThumb       Pmenu
+
+"__PMenuDiagnostic
+call s:h("PmenuError",    {"fg": "red", "bg": s:cursor_line, "gui": "bold"})
+
 " __PmenuSel__
 call s:h("PmenuSel",      {"fg": s:norm, "bg": s:cursor_line, "gui": "bold"})
 
