@@ -63,7 +63,6 @@ if &background == "dark"
   let s:ok               = s:light_green
   let s:warning          = s:yellow
   let s:error            = s:light_red
-  let s:pmenu            = s:subtle_black
 else
   let s:bg               = s:white
   let s:bg_subtle        = s:lighter_gray
