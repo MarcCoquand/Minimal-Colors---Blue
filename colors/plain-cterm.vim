@@ -223,6 +223,10 @@ call s:h("WildMenu",      {"cterm": "underline,bold", "bg": s:bg, "fg": s:norm})
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:cursor_line})
 hi! link PmenuSbar        Pmenu
 hi! link PmenuThumb       Pmenu
+
+"__PMenuDiagnostic
+call s:h("PmenuError",    {"fg": s:norm, "bg": s:cursor_line})
+
 " __PmenuSel__
 call s:h("PmenuSel",      {"fg": s:norm, "bg": s:cursor_line, "cterm": "bold"})
 
