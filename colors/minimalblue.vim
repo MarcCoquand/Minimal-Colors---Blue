@@ -1,6 +1,4 @@
-" Name:       plain.vim
-" Version:    0.1
-" Maintainer: github.com/andreypopp
+" Name:       minimalblue.vim
 " License:    The MIT License (MIT)
 "
 " Based on
@@ -18,75 +16,53 @@ if exists('syntax on')
     syntax reset
 endif
 
-let g:colors_name='plain'
+let g:colors_name='minimalblue'
 
-let s:black           = { "gui": "#222222", "cterm": "0"   }
-let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
-let s:white           = { "gui": "#F1F1F1", "cterm": "15"  }
-let s:light_black     = { "gui": "#424242", "cterm": "8"   }
-let s:lighter_black   = { "gui": "#545454", "cterm": "240" }
-let s:subtle_black    = { "gui": "#303030", "cterm": "236" }
-let s:light_gray      = { "gui": "#999999", "cterm": "249" }
-let s:lighter_gray    = { "gui": "#CCCCCC", "cterm": "251" }
-let s:lightest_gray   = { "gui": "#E5E5E5", "cterm": "251" }
-let s:dark_red        = { "gui": "#C30771", "cterm": "1"   }
-let s:light_red       = { "gui": "#E32791", "cterm": "1"   }
-let s:dark_blue       = { "gui": "#008EC4", "cterm": "4"   }
-let s:light_blue      = { "gui": "#B6D6FD", "cterm": "153" }
-let s:dark_cyan       = { "gui": "#20A5BA", "cterm": "6"   }
-let s:light_cyan      = { "gui": "#4FB8CC", "cterm": "14"  }
-let s:dark_green      = { "gui": "#10A778", "cterm": "2"   }
-let s:light_green     = { "gui": "#5FD7A7", "cterm": "10"  }
-let s:dark_purple     = { "gui": "#523C79", "cterm": "5"   }
-let s:light_purple    = { "gui": "#6855DE", "cterm": "13"  }
-let s:light_yellow    = { "gui": "#F3E430", "cterm": "11"  }
-let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
+let s:black          		    = { "gui": "#222222", "cterm": "1"   }
+let s:medium_gray    		    = { "gui": "#767676", "cterm": "1" }
+let s:white          		    = { "gui": "#FFFFFF", "cterm": "1"   }
+let s:light_black    		    = { "gui": "#424242", "cterm": "1"   }
+let s:lighter_black  		    = { "gui": "#545454", "cterm": "1" }
+let s:subtle_black   		    = { "gui": "#303030", "cterm": "1" }
+let s:light_gray     		    = { "gui": "#999999", "cterm": "1" }
+let s:lighter_gray   		    = { "gui": "#CCCCCC", "cterm": "1" }
+let s:lightest_gray  		    = { "gui": "#A4C1CC", "cterm": "1" }
+let s:dark_red       		    = { "gui": "#C30771", "cterm": "1"   }
+let s:light_red      		    = { "gui": "#EE4D49", "cterm": "1"   }
+let s:dark_blue      		    = { "gui": "#0688AD", "cterm": "1"   }
+let s:light_blue     		    = { "gui": "#67B3E0", "cterm": "1" }
+let s:light_gray_blue       = { "gui": "#97DDF8", "cterm": "1" }
+let s:very_subtle_blue      = { "gui": "#20A8DA", "cterm": "1" }
+let s:bg_blue 				      = { "gui": "#05A3DC", "cterm": "1" }
+let s:dark_cyan      			  = { "gui": "#20A5BA", "cterm": "1"   }
+let s:light_cyan     			  = { "gui": "#4FB8CC", "cterm": "1"  }
+let s:dark_green     			  = { "gui": "#10A778", "cterm": "1"   }
+let s:light_green    			  = { "gui": "#6BF863", "cterm": "1"  }
+let s:dark_purple    			  = { "gui": "#523C79", "cterm": "1"   }
+let s:light_purple   			  = { "gui": "#6855DE", "cterm": "1"  }
+let s:yellow   			  		  = { "gui": "#FCBA38", "cterm": "1"  }
+let s:orange   			  		  = { "gui": "#E4A72F", "cterm": "1"  }
 
-if &background == "dark"
-  let s:bg               = s:black
-  let s:bg_subtle        = s:light_black
-  let s:bg_very_subtle   = s:subtle_black
-  let s:norm             = s:lighter_gray
-  let s:norm_subtle      = s:light_gray
-  let s:norm_very_subtle = s:medium_gray
-  let s:purple           = s:light_purple
-  let s:cyan             = s:light_cyan
-  let s:green            = s:light_green
-  let s:red              = s:light_red
-  let s:yellow           = s:light_yellow
-  let s:visual           = s:lighter_black
-  let s:cursor_line      = s:subtle_black
-  let s:constant         = s:light_blue
-  let s:comment          = s:light_gray
-  let s:selection        = s:dark_yellow
-  let s:selection_fg     = s:black
-  let s:ok               = s:light_green
-  let s:warning          = s:yellow
-  let s:error            = s:light_red
-else
-  let s:bg               = s:white
-  let s:bg_subtle        = s:lighter_gray
-  let s:bg_very_subtle   = s:light_gray
-  let s:norm             = s:light_black
-  let s:norm_subtle      = s:lighter_black
-  let s:norm_very_subtle = s:medium_gray
-  let s:purple           = s:dark_purple
-  let s:cyan             = s:dark_cyan
-  let s:green            = s:dark_green
-  let s:red              = s:dark_red
-  let s:yellow           = s:dark_yellow
-  let s:visual           = s:light_blue
-  let s:cursor_line      = s:lightest_gray
-  let s:constant         = s:dark_blue
-  let s:comment          = s:light_gray
-  let s:selection        = s:light_yellow
-  let s:selection_fg     = s:light_black
-  let s:ok               = s:light_green
-  let s:warning          = s:yellow
-  let s:error            = s:dark_red
-  let s:pmenu            = s:lightest_gray
-
-endif
+let s:bg               = s:bg_blue
+let s:bg_subtle        = s:dark_blue
+let s:bg_very_subtle   = s:very_subtle_blue
+let s:norm             = s:white
+let s:norm_subtle      = s:light_blue
+let s:norm_very_subtle = s:light_blue
+let s:purple           = s:light_purple
+let s:cyan             = s:light_cyan
+let s:green            = s:light_green
+let s:visual           = s:light_gray_blue
+let s:cursor_line      = s:light_gray_blue
+let s:constant         = s:yellow
+let s:comment          = s:light_blue
+let s:selection        = s:light_gray_blue
+let s:selection_fg     = s:black
+let s:ok               = s:light_green
+let s:warning          = s:orange
+let s:yellow           = s:yellow
+let s:error            = s:light_red
+let s:red              = s:light_red
 
 unlet s:black
 unlet s:medium_gray
@@ -107,8 +83,6 @@ unlet s:dark_green
 unlet s:light_green
 unlet s:dark_purple
 unlet s:light_purple
-unlet s:light_yellow
-unlet s:dark_yellow
 
 " https://github.com/noahfrederick/vim-hemisu/
 function! s:h(group, style)
@@ -185,7 +159,7 @@ hi! link Question         ErrorMsg
 " __WarningMsg__
 call s:h("WarningMsg",    {"fg": s:warning})
 " __MoreMsg__
-call s:h("MoreMsg",       {"fg": s:norm_subtle, "cterm": "bold", "gui": "bold"})
+call s:h("MoreMsg",       {"fg": s:norm_subtle, "gui": "bold"})
 hi! link ModeMsg          MoreMsg
 
 " __NonText__
@@ -200,9 +174,9 @@ call s:h("Search",        {"bg": s:selection, "fg": s:selection_fg})
 call s:h("IncSearch",     {"bg": s:selection, "fg": s:selection_fg, "gui": "bold"})
 
 " __Visual__
-call s:h("Visual",        {"bg": s:visual})
+call s:h("Visual",        {"bg": s:selection, "fg": s:selection_fg})
 " __VisualNOS__
-call s:h("VisualNOS",     {"bg": s:bg_subtle})
+call s:h("VisualNOS",     {"bg": s:selection, "fg": s:selection_fg})
 
 call s:h("Ignore",        {"fg": s:bg})
 
@@ -215,42 +189,42 @@ call s:h("DiffChange",    {"fg": s:yellow})
 " __DiffText__
 call s:h("DiffText",      {"fg": s:constant})
 
-if has("gui_running")
-  call s:h("SpellBad",    {"gui": "underline", "sp": s:red})
-  call s:h("SpellCap",    {"gui": "underline", "sp": s:ok})
-  call s:h("SpellRare",   {"gui": "underline", "sp": s:error})
-  call s:h("SpellLocal",  {"gui": "underline", "sp": s:ok})
-else
-  call s:h("SpellBad",    {"cterm": "underline", "fg": s:red})
-  call s:h("SpellCap",    {"cterm": "underline", "fg": s:ok})
-  call s:h("SpellRare",   {"cterm": "underline", "fg": s:error})
-  call s:h("SpellLocal",  {"cterm": "underline", "fg": s:ok})
-endif
+call s:h("SpellBad",    {"gui": "underline", "sp": s:red})
+call s:h("SpellCap",    {"gui": "underline", "sp": s:ok})
+call s:h("SpellRare",   {"gui": "underline", "sp": s:error})
+call s:h("SpellLocal",  {"gui": "underline", "sp": s:ok})
 
 hi! link helpHyperTextEntry Title
 hi! link helpHyperTextJump  String
 
 " __StatusLine__
-call s:h("StatusLine",        {"gui": "underline", "bg": s:bg, "fg": s:norm_very_subtle})
+call s:h("StatusLine",        	{"gui":"bold", "bg": s:norm, "fg": s:bg_subtle})
 " __StatusLineNC__
-call s:h("StatusLineNC",      {"gui": "underline", "bg": s:bg, "fg": s:bg_subtle})
+call s:h("StatusLineNC",        {"bg": s:norm, "fg": s:bg_very_subtle})
 " __WildMenu__
-call s:h("WildMenu",          {"gui": "underline,bold", "bg": s:bg, "fg": s:norm})
+call s:h("WildMenu",        	{"gui":"bold", "bg": s:norm, "fg": s:bg_subtle})
 
-call s:h("StatusLineOk",      {"gui": "underline", "bg": s:bg, "fg": s:ok})
-call s:h("StatusLineError",   {"gui": "underline", "bg": s:bg, "fg": s:error})
-call s:h("StatusLineWarning", {"gui": "underline", "bg": s:bg, "fg": s:warning})
+call s:h("StatusLineOk",      { "gui":"bold", "bg": s:norm, "fg": s:ok})
+call s:h("StatusLineError",   { "gui":"bold", "bg": s:norm, "fg": s:red})
+call s:h("StatusLineWarning", { "gui":"bold", "bg": s:norm, "fg": s:warning})
 
 " __Pmenu__
-call s:h("Pmenu",         {"fg": s:norm, "bg": s:cursor_line})
+call s:h("Pmenu",    					{"gui":"bold", "bg": s:norm, "fg": s:bg_subtle})
 hi! link PmenuSbar        Pmenu
 hi! link PmenuThumb       Pmenu
+hi! link PmenuError 			StatusLineError
+
+" __VertSplit__
+call s:h("VertSplit",        	{"gui":"bold", "bg": s:bg, "fg": s:bg_subtle})
 
 "__PMenuDiagnostic
-call s:h("PmenuError",    {"gui": "bold", "fg": "red", "bg": s:cursor_line})
+call s:h("DiagnosticError",   {"gui":"bold", "bg": s:bg,   "fg": s:error})
+
+"__Trouble
+call s:h("TroubleNorm",   {"gui":"bold", "bg": s:bg_very_subtle, "fg": s:norm})
 
 " __PmenuSel__
-call s:h("PmenuSel",      {"fg": s:norm, "bg": s:cursor_line, "gui": "bold"})
+call s:h("PmenuSel",        {"gui":"bold", "bg": s:bg_subtle, "fg": s:norm})
 
 hi! link TabLine          Normal
 hi! link TabLineSel       Keyword
@@ -262,7 +236,7 @@ call s:h("CursorLine",    {"bg": s:cursor_line})
 call s:h("ColorColumn",   {"bg": s:cursor_line})
 
 " __MatchParen__
-call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:norm})
+call s:h("MatchParen",    {"bg": s:cursor_line, "fg": s:norm})
 
 hi! link htmlH1 Normal
 hi! link htmlH2 Normal
