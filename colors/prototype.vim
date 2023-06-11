@@ -211,7 +211,7 @@ call s:h("StatusLine",        {"bg": s:bg_subtle, "fg": s:norm})
 " __StatusLineNC__
 call s:h("StatusLineNC",      {"bg": s:bg_subtle, "fg": s:norm_subtle})
 " __WildMenu__
-call s:h("WildMenu",          {"gui": "underline,bold", "bg": s:bg, "fg": s:norm})
+call s:h("WildMenu",          {"gui": "underline,bold", "bg": s:bg_subtle, "fg": s:norm})
 
 call s:h("StatusLineOk",      { "bg": s:bg_subtle, "fg": s:ok})
 call s:h("StatusLineError",   { "bg": s:bg_subtle, "fg": s:error})
