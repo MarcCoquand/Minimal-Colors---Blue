@@ -233,6 +233,9 @@ call s:h("CursorLine",    {"bg": s:cursor_line})
 " __CursorColumn__
 call s:h("ColorColumn",   {"bg": s:cursor_line})
 
+" __ Copilot "
+call s:h("CopilotSuggestion", {"fg": s:norm_very_subtle})
+   
 " __MatchParen__
 call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:norm})
 
@@ -292,3 +295,4 @@ hi link ALEInfoSign InfoMsg
 
 hi link sqlStatement Statement
 hi link sqlKeyword Keyword
+
