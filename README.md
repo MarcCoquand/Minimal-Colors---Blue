@@ -5,3 +5,4 @@ A minimal theme based on blue colors. Based on vim-colors-plain + [this picture 
 ## Screenshots
 
 ![Screenshot](screenshots/prototype.png)
+![Screenshot](screenshots/prototype2.png)
